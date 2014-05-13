@@ -9,7 +9,7 @@
   },
   "homepage": "https://github.com/nbqx/sumo-stream",
   "main": "index.js",
-  "bin": "cmd.js",
+  "bin": "bin/cmd.js",
   "license": "MIT",
   "dependencies": {
     "growl": "^1.7.0",

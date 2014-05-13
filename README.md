@@ -9,4 +9,12 @@
     $ npm install
     $ node cmd.js
 
+or
+
+    $ git clone https://github.com/nbqx/sumo-stream.git
+    $ cd sumo-stream
+    $ npm install -g .
+    $ sumo-stream
+
+
 
