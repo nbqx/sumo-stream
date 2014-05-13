@@ -17,7 +17,7 @@ var notify = through2.obj(function(o,e,next){
   next();
 });
 
-var sumo = require('.');
+var sumo = require(__dirname);
 var opt = {interval: 30000};
 
 sumo(opt).pipe(notify).on('data',function(data){
