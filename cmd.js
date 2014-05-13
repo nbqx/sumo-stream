@@ -3,14 +3,14 @@ var through2 = require('through2'),
 
 function toOneLine(a,kimarite){
   if(kimarite){
-    return [a[0],a[1],"|",a[2],"|",a[3],a[4]].join(" ");
+    return [a.east.name,a.east.hoshi,"|",a.kimarite,"|",a.west.name,a.west.hoshi].join(" ");
   }else{
-    return [a[0],a[1],"-",a[3],a[4]].join(" ");
+    return [a.east.name,a.east.hoshi,"-",a.west.name,a.west.hoshi].join(" ");
   }
 };
 
 var notify = through2.obj(function(o,e,next){
-  if(o[2]!==''){
+  if(o.kimarite!==''){
     growl(toOneLine(o),{title:'sumo-stream'});
   }
   this.push(o);
@@ -21,7 +21,7 @@ var sumo = require('.');
 var opt = {interval: 30000};
 
 sumo(opt).pipe(notify).on('data',function(data){
-  if(data[2]!==''){
+  if(data.kimarite!==''){
     console.log(toOneLine(data,true));
   }
 });

@@ -17,7 +17,19 @@ module.exports = function(opts){
 
       if(diff.length!==0){
         diff.forEach(function(o){
-          s.push(o.split('-'));
+          var a = o.split('-');
+          var obj = {
+            kimarite: a[2],
+            east: {
+              name: a[0],
+              hoshi: a[1]
+            },
+            west: {
+              name: a[3],
+              hoshi: a[4]
+            }
+          };
+          s.push(obj);
         });
       }
 
