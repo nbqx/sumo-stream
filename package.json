@@ -1,0 +1,24 @@
+{
+  "name": "sumo-stream",
+  "description": "sumo stream",
+  "version": "0.0.0",
+  "author": "nbqx",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nbqx/sumo-stream.git"
+  },
+  "homepage": "https://github.com/nbqx/sumo-stream",
+  "main": "index.js",
+  "bin": "cmd.js",
+  "license": "MIT",
+  "dependencies": {
+    "growl": "^1.7.0",
+    "lodash.defaults": "^2.4.1",
+    "through2": "^0.4.1",
+    "request": "^2.34.0",
+    "lodash.difference": "^2.4.1",
+    "lodash.map": "^2.4.1",
+    "lodash.reduce": "^2.4.1",
+    "jsdom": "^0.10.5"
+  }
+}
